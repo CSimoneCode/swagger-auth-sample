@@ -11,7 +11,7 @@ namespace WebApplication1.Middleware
     {
         public static IApplicationBuilder UseSwaggerAuthorized(this IApplicationBuilder builder)
         {
-            return builder.UseMiddleware<SwaggerAuthMiddleware>();
+            return builder.UseMiddleware<SwaggerAuthMiddleware>("");
         }
     }
 
