@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Routing;
 using System.Net;
 
-namespace WebApplication1.Middleware
+namespace WebApplication1.CustomAuthMiddleware
 {
     // You may need to install the Microsoft.AspNetCore.Http.Abstractions package into your project
     public class CustomAuthMiddleware

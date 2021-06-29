@@ -11,6 +11,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebApplication1.CustomAuthMiddleware;
+using WebApplication1.Middleware;
 
 namespace WebApplication1
 {
@@ -39,12 +41,15 @@ namespace WebApplication1
         {
             if (env.IsDevelopment())
             {
+                app.UseAuthentication();
                 app.UseDeveloperExceptionPage();
+                app.UseSwaggerAuthorized();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebApplication1 v1"));
             }
 
             app.UseHttpsRedirection();
+
 
             app.UseRouting();
 
